@@ -11,5 +11,5 @@ int main(void)
 	long long int d;
 	float f;
 
-	printf("Size of char: %lu byte(s)\n");
-}
+	printf("Size of char: %lu byte(s)\n", (unsigned long) sizeof(a));
+	return (0);
