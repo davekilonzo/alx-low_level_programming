@@ -1,0 +1,3 @@
+slower.c:9: warning: No description found for parameter or member 'c'
+3-islower.c:9: warning: No description found for return value of '_islower'
+_islower
