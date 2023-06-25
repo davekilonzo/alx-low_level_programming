@@ -9,7 +9,7 @@ int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
 		return (0);
-	return (1 + _strlen_recursions(s + 1));
+	return (1 + _strlen_recursion(s + 1));
 }
 /**
  * is_palindrome_helper - check if string is a palindrome
@@ -19,7 +19,7 @@ int _strlen_recursion(char *s)
  *
  * Return: 1 if palindrome, 0 if not
  */
-int is_palindrome_helper(char *s, start, int end)
+int is_palindrome_helper(char *s, int start, int end)
 {
 	if (start >= end)
 		return (1);
