@@ -1,10 +1,9 @@
 #include <stdio.h>
-
 /**
- * struct dog - a structure representing a dog
- * @name: the dog's name
- * @age: the dog's age
- * @owner: the dog's owner
+ * struct dog - a dog structure
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
  */
 struct dog
 {
@@ -13,11 +12,11 @@ struct dog
 	char *owner;
 };
 /**
- * init_dog - initialize a variable of type struct dog
- * @d: a pointer to a struct dog variable to initialize
- * @name: the dog's name
- * @age: the dog's age
- * @owner: the dog's owner
+ * init_dog - initializes a variable of type struct dog
+ * @d: pointer to struct dog to initialize
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
