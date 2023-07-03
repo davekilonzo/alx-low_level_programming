@@ -1,14 +1,20 @@
-#include <stddef.h>
-#include "calc.h"
+#include <stdio.h>
+#include "3-calc.h"
 /**
- * get_op_func - selects the correct function to perform the operation asked by the user
- * @s: operator string
+ * get_op_func - selects the correct function to perform the operation
+ * @s: operator passed as argument to the program
  *
- * Return: pointer to the correct function, or NULL if operator not found
+ * Return: pointer to the function that corresponds to the operator given
  */
 int (*get_op_func(char *s))(int, int)
 {
-	op_t ops[] = {
+	int i = 0;
+
+	struct op
+	{
+		char *op;
+		int (*f)(int, int);
+	} ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
 		{"*", op_mul},
@@ -16,12 +22,11 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
-
-	for (i = 0; ops[i].op; i++)
+	while (ops[i].op != NULL)
 	{
-		if (ops[i].op[0] == s[0] && s[1] == '\0')
+		if (*s == *(ops[i].op) && *(s + 1) == '\0')
 			return (ops[i].f);
+		i++;
 	}
 	return (NULL);
 }

@@ -1,4 +1,5 @@
-#include "calc.h"
+#include <stdio.h>
+#include "3-calc.h"
 /**
  * op_add - adds two integers
  * @a: first integer
@@ -37,14 +38,14 @@ int op_mul(int a, int b)
  * @a: first integer
  * @b: second integer
  *
- * Return: result of the division of a by b
+ * Return: quotient of a and b
  */
 int op_div(int a, int b)
 {
 	return (a / b);
 }
 /**
- * op_mod - calculates the modulo of two integers
+ * op_mod - calculates the remainder of the division of two integers
  * @a: first integer
  * @b: second integer
  *
